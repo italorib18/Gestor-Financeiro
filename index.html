@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor Financeiro</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <nav id="barra-superior">
+            <a href="https://github.com/italorib18" class="item">GitHub</a>
+            <nav class="meses item">
+                <button id="volta-mes"> < </button>
+                <h2 id="mes-atual">Janeiro</h2>
+                <button id="avança-mes">></button>
+            </nav>
+            <a href="javascript:void(0);" class="item" onclick="abrirAlerta()">?</a>
+        </nav>
+
+        <section class="folhas">
+            <div class="folha-de-ganho">
+                <h2>Ganhos</h2>
+                <hr>
+                <h2>Adicionar Valor e Descrição</h2>
+
+                <div class="container">
+                    <input type="number" id="valorGanhoInput" placeholder="Valor" step="any">
+                    <input type="text" id="descricaoGanhoInput" placeholder="Descrição">
+                    <button onclick="adicionarItemGanho()">Adicionar</button>
+                </div>
+
+                <div id="resultadoDiv" class="output"></div>
+            </div>
+            <div class="folha-de-gasto">
+                <h2>Gastos</h2>
+                <hr>
+                <h2>Adicionar Valor e Descrição</h2>
+
+                <div class="container">
+                    <input type="number" id="valorGastoInput" placeholder="Valor" step="any">
+                    <input type="text" id="descricaoGastoInput" placeholder="Descrição">
+                    <button onclick="adicionarItemGasto()">Adicionar</button>
+                </div>
+
+                <div id="resultadoDiv2" class="output"></div>
+            </div>
+        </section>
+
+        <div id="finalizar-mes" class="botoes-inferiores">
+            <button onclick="finalizarMes()">Finalizar Mês</button>
+            <button onclick="limparFolhas()">Limpar Folhas</button>
+        </div>
+    </div>
+
+    <!-- Estrutura do alerta personalizado -->  
+    <div id="alertaPersonalizado" class="alerta">
+        <div class="alerta-content">
+            <span class="fechar" onclick="fecharAlerta('alertaPersonalizado')">&times;</span>
+            <h2 id="alertaTitulo">Como Usar?</h2>
+            <p id="alertaMensagem">Coloque os valores nas respectivas folhas de Ganho e Gasto. Assim que concluir, clique em "Finalizar Mês" para ver o resultado das suas finanças no mês.</p>
+        </div>
+    </div>
+
+    <script src="./scripts/gestor.js"></script>
+</body>
+
+</html>

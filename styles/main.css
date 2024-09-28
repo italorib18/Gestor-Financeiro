@@ -1,0 +1,108 @@
+/*estilização geral*/
+html{
+    height: 100vh;
+    font-size: 12px;
+}
+
+/*navigation dos meses*/
+#barra-superior{
+    display: flex;
+    justify-content: space-around;
+    border-radius: 7px;
+    border: 2px white solid;
+    margin: 2% 15% 5px 15%; 
+}
+a{
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    width: 50px;
+}
+.item{
+    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+}
+.meses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+}
+#avança-mes{
+    margin: 5px;
+}
+#volta-mes{
+    margin: 5px;
+}
+/* Estilos para o alerta */
+.alerta {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+}
+
+.alerta-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+.fechar:hover {
+    color: red;
+}
+
+.alerta h2 {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.alerta p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+/*folhas de ganho e gasto*/
+.folhas{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.folha-de-ganho{
+    height: 500px;
+    width: 450px;
+    border-radius: 7px;
+    border: 2px white solid;
+}
+.folha-de-gasto{
+height: 500px;
+width: 450px;
+border-radius: 7px;
+border: 2px white solid;
+}
+h2{
+    text-align: center;
+}
+
+.botoes-inferiores{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 10px;
+}
