@@ -3,7 +3,10 @@ html{
     height: 100vh;
     font-size: 12px;
 }
-
+body{ 
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
 /*navigation dos meses*/
 #barra-superior{
     display: flex;
@@ -43,11 +46,13 @@ a{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
 }
 
 .alerta-content {
-    background-color: white;
+    background-color: rgb(22, 22, 22);
+    color: white;
     margin: 15% auto;
     padding: 20px;
     border-radius: 10px;
