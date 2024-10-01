@@ -128,7 +128,7 @@ h2 {
 }
 
 /* Estilos para dispositivos móveis */
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
     #barra-superior {
         flex-direction: column;
         align-items: center;
