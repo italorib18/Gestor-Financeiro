@@ -1,52 +1,62 @@
 /*estilização geral*/
-html{
+html {
     height: 100vh;
     font-size: 12px;
 }
-body{ 
+
+body {
     background-color: rgb(22, 22, 22);
     color: white;
 }
+
 /*navigation dos meses*/
-#barra-superior{
+#barra-superior {
     display: flex;
     justify-content: space-around;
     border-radius: 7px;
     border: 2px white solid;
-    margin: 2% 15% 5px 15%; 
+    margin: 2% 15% 5px 15%;
 }
-a{
+
+a {
     margin: auto;
     font-size: 20px;
     color: white;
     text-decoration: none;
     width: 50px;
 }
-.item{
-    box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho total */
+
+.item {
+    box-sizing: border-box;
+    /* Garante que padding e border não aumentem o tamanho total */
 }
-.meses{
+
+.meses {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
 }
-#avança-mes{
+
+#avança-mes {
     margin: 5px;
 }
-#volta-mes{
+
+#volta-mes {
     margin: 5px;
 }
+
 /* Estilos para o alerta */
 .alerta {
-    display: none; /* Inicialmente oculto */
+    display: none;
+    /* Inicialmente oculto */
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
@@ -67,7 +77,8 @@ a{
     right: 15px;
     font-size: 24px;
     cursor: pointer;
-    color: white; /* a cor do botao de fechar*/
+    color: white;
+    /* a cor do botao de fechar*/
 }
 
 .fechar:hover {
@@ -83,31 +94,90 @@ a{
     margin-top: 10px;
     font-size: 18px;
 }
+
 /*folhas de ganho e gasto*/
-.folhas{
+.folhas {
     display: flex;
     justify-content: center;
     gap: 30px;
 }
-.folha-de-ganho{
+
+.folha-de-ganho {
     height: 500px;
     width: 450px;
     border-radius: 7px;
     border: 2px white solid;
 }
-.folha-de-gasto{
-height: 500px;
-width: 450px;
-border-radius: 7px;
-border: 2px white solid;
+
+.folha-de-gasto {
+    height: 500px;
+    width: 450px;
+    border-radius: 7px;
+    border: 2px white solid;
 }
-h2{
+
+h2 {
     text-align: center;
 }
 
-.botoes-inferiores{
+.botoes-inferiores {
     display: flex;
     justify-content: center;
     margin: 15px;
     gap: 10px;
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 600px) {
+    #barra-superior {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Link do GitHub no topo */
+    #barra-superior a:first-child {
+        order: 1;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Meses ficam no meio */
+    .meses {
+        order: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        max-width: 300px; /* Limita a largura dos meses */
+    }
+
+    /* O botão "?" vai para baixo */
+    #barra-superior a:last-child {
+        order: 3;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+
+    /* Folhas ocupam 100% da tela, em ordem vertical */
+    .folhas {
+        flex-direction: column;
+    }
+
+    .folha-de-ganho,
+    .folha-de-gasto {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Botões embaixo, centralizados */
+    .botoes-inferiores {
+        text-align: center;
+    }
+
+    .botoes-inferiores button {
+        width: 100%;
+        max-width: 300px;
+    }
 }
